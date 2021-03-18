@@ -2,7 +2,7 @@ const BOARD_SIZE = 7;
 const BLOCK_SIZE = 50;
 
 const canvas = {
-  width: 750,
+  width: 725,
   height: 550,
 };
 
@@ -16,8 +16,7 @@ function renderGrid({ startPosition, tileSize, dataSize }) {
 
   for (let y = 0; y < GRID_SIZE; y++) {
     for (let x = 0; x < GRID_SIZE; x++) {
-
-      if (dataSize[x][y]) fill("orange") 
+      if (dataSize[x][y]) fill("orange");
       else noFill();
 
       square(
@@ -40,7 +39,7 @@ function draw() {
 
   renderGrid({
     startPosition: [275, 275],
-    tileSize: BLOCK_SIZE,
+    tileSize: 55.5,
     dataSize: [
       [true, true, true, true, true, true, true, true, true],
       [true, false, false, false, false, false, false, false, true],
@@ -58,8 +57,8 @@ function draw() {
     startPosition: [625, 100],
     tileSize: BLOCK_SIZE,
     dataSize: [
-      [true, true, true],
-      [true, false, true],
+      [false, false, false],
+      [false, true, false],
       [true, true, true],
     ],
   });
@@ -68,9 +67,9 @@ function draw() {
     startPosition: [625, 275],
     tileSize: BLOCK_SIZE,
     dataSize: [
-      [true, true, true],
-      [true, false, true],
-      [true, true, true],
+      [false, true, false],
+      [false, true, false],
+      [false, true, false],
     ],
   });
 
@@ -78,10 +77,9 @@ function draw() {
     startPosition: [625, 450],
     tileSize: BLOCK_SIZE,
     dataSize: [
-      [true, true, true],
-      [true, false, true],
-      [true, true, true],
+      [true, true, false],
+      [false, true, true],
+      [false, false, false],
     ],
   });
-
 }
